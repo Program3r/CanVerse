@@ -30,7 +30,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	font-size: 100px;
     line-height:100px;
 
-    border: 10px solid black;
+    border: 10px solid purple;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
@@ -40,4 +40,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
     background-color: white;
     opacity: .6;
 }
-}
+
