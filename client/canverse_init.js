@@ -1,3 +1,4 @@
+/*
 $(document).ready(function() {
   // Handler for .ready() called.
   var cube = $("<div>");
@@ -18,7 +19,19 @@ $(document).ready(function() {
   });
   
   var leftStep = step.clone();
-  leftStep.text("THE CANVERSE");
+  
+  var fiddleFrame = $("<iframe />")
+  .css({
+      width: "100%",
+      height:"100%"
+  })
+  .attr({
+      src: "http://jsfiddle.net/rniemeyer/Wjjnd/embedded/"
+  });
+  
+      
+  
+  leftStep.append(fiddleFrame);
   leftStep.attr({
       id: "left",
       "data-rotate-y": 270,
@@ -116,4 +129,18 @@ $(document).ready(function() {
 	cube.jmpress("route", ["#bottom", "#right"], true);
 
   
+});
+*/
+
+
+//Bootstrap Body Attributes
+$(document).ready(function() {
+    $("body").attr({
+        class:"preview",
+        id:"top",
+        "data-spy":"scroll",
+        "data-target":".subnav",
+        "data-offset":80
+    });
+    $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
 });
