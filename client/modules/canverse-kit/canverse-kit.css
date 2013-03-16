@@ -1,0 +1,20 @@
+/* Sections */
+section.canverse-kit_add {
+    border: 1px dashed black;
+    padding:10px;
+    min-height:300px;
+    -webkit-transition: all 1s;
+}
+section.canverse-kit_effect_sink {
+    -moz-box-shadow: inset 0 0 15px #888;
+    -webkit-box-shadow: inset 0 0 15px#888;
+    box-shadow: inner 0 0 15px #888;
+}
+
+
+
+/* Tools */
+.canverse-kit_tool {
+    padding:15px;
+}
+

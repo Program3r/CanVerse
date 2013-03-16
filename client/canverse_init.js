@@ -1,3 +1,43 @@
+Meteor.startup(function () {
+    $(document).ready(function() {
+        $('#canverse').canverseKit();
+        $('#canverse').canverseKit("spawnLayout", {
+            selector: "#canverse"
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 $(document).ready(function() {
   // Handler for .ready() called.
