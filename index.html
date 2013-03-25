@@ -1,44 +1,28 @@
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-  <body>
-
-
-  <!-- Navbar
-    ================================================== -->
- <div class="navbar navbar-fixed-top">
-   <div class="navbar-inner">
-     <div class="container">
-       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </a>
-       <a class="brand" href="../">CanVerse</a>
-       <div class="nav-collapse collapse" id="main-menu">
-        <ul class="nav" id="main-menu-left">
-          <li><a onclick="pageTracker._link(this.href); return false;" href="#samples">Code Samples</a></li>
-          </li>
-        </ul>
-        <ul class="nav pull-right" id="main-menu-right">
-          <li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="Showcase of Bootstrap sites &amp; apps" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'builtwithbootstrap']);">Built With Bootstrap <i class="icon-share-alt"></i></a></li>
-        </ul>
-       </div>
-     </div>
-   </div>
- </div>
-
-    <div id="canverse" class="container">
-
-
-<!-- Masthead
-================================================== -->
-<header class="jumbotron subhead" id="overview">
-  <div class="row">
-    <div class="span6">
-      <h1>CanVerse</h1>
-      <p class="lead">Dream. Develop. Express.</p>
+<body>
+    <div id="canverse">
     </div>
-  </div>
-</header>
+</body>
+   
 
 
-  </body>
+
+<template name="buttonDropdown">
+<div class="btn-group">
+                <button class="btn">{{name}}</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  
+                  {{#each values}}
+                        <li><a href="#" data-action-value="{{value}}">{{actionname}}</a></li>
+                  {{/each}}
+                </ul>
+              </div>
+              <a href="#" id="username" data-type="text" data-pk="1" data-url="/post" data-original-title="Enter username">superuser</a>
+</template>
+
+

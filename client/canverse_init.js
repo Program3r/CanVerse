@@ -2,8 +2,9 @@ Meteor.startup(function () {
     $(document).ready(function() {
         $('#canverse').canverseKit();
         $('#canverse').canverseKit("spawnLayout", {
-            selector: "#canverse"
-        });
+            selector: "#canverse",
+            toolbox:false
+        });/* */
     });
 });
 
