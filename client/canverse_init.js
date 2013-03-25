@@ -5,6 +5,7 @@ Meteor.startup(function () {
             selector: "#canverse",
             toolbox:false
         });/* */
+        
     });
 });
 
