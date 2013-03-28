@@ -3,13 +3,21 @@
     var methods = {
         init: function(options) {
             var container = $(this);
+            $("body").delegate(".tool-add","click",function(event) {
+                var rad = $(this).attr("id").replace("#ctl", "#rad");
+                $(rad).removeClass("canverse-kit_add");
+                $(rad).addClass("well");
+                $(rad).canverseKit("spawnLayout", {tag:"div", blank:true, class:"span1"});
+                
+                return false;
+            });
         },
         spawnLayout: function(options) {
-            var section = $("<section>");
-            section.addClass("canverse-kit_template");
+            var section = $("<"+options.tag+">");
             section.addClass("canverse-kit_add");
+            section.addClass(options.class);
             $(section).canverseKit("applySkeletonControls", {blank:true});
-            $(options.selector).append(section);
+            $(this).append(section);
         },
         addTools: function(options){
             //Accepts: {
@@ -43,20 +51,29 @@
             });
         },
         applySkeletonControls: function( options ){
-            var genId = new Date().getTime();
+            function makeid()
+            {
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            
+                for( var i=0; i < 5; i++ )
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+            
+                return text;
+            }
+            var genId = makeid();
             
             var controller = $(Template.skeletonControls({id:"#ctl"+genId, remote:"#rad"+genId}));
-            $(this).attr("id", "#rad"+genId);
+            $(this).attr("id","rad"+genId);
             if(options.blank){
                 $(this).popover({html:true, content:controller, container:"body", placement:"top", animation:"true", trigger:"click"});
             }
-            $(controller).click(function() {
-              alert("yay");
-            });
+
             //$(this).canverseKit("renderOptions", {set:"span-class-size", controller:controller});
             /*$("#canverse").delegate("#"+controllerId+" button", "click", function() {
               alert("yay");
             });*/
+            
         }
 };
     $.fn.canverseKit = function(method) {

@@ -2,7 +2,14 @@
 section.canverse-kit_add {
     border: 1px dashed black;
     padding:10px;
-    min-height:300px;
+    min-width:20px;
+    min-height:20px;
+    -webkit-transition: all 1s;
+}
+div.canverse-kit_add {
+    border: 1px dashed black;
+    padding:10px;
+    min-height:50px;
     -webkit-transition: all 1s;
 }
 section.canverse-kit_effect_sink {
@@ -10,18 +17,9 @@ section.canverse-kit_effect_sink {
     -webkit-box-shadow: inset 15px 15px 15px#888;
     box-shadow: inner 15px 15px 15px#888;
 }
-
-
-
 /* Tools */
 .canverse-kit_tool {
     padding:15px;
-}
-
-.canverse-kit_template{
-    border:1px dashed black;
-    min-height:50px !important;
-    -webkit-transition: All 1s;
 }
 .canverse-kit_template.selectedZoomTarget{
         border:1px dashed red;

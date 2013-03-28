@@ -5,5 +5,5 @@ if (Meteor.isServer) {
 }
 
 Meteor.publish("slides", function () {
-  return Parties.find({owner: this.userId});
+  //return Parties.find({owner: this.userId});
 });

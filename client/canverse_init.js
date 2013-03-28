@@ -1,8 +1,10 @@
 Meteor.startup(function () {
     $(document).ready(function() {
+        
         $('#canverse').canverseKit();
         $('#canverse').canverseKit("spawnLayout", {
-            selector: "#canverse",
+            class:"row",
+            tag:"section",
             toolbox:false
         });/* */
         

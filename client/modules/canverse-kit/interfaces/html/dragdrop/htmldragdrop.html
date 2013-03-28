@@ -1,0 +1,16 @@
+<template name="htmlDragDrop">
+        {{#each tags}}
+            {{>dragTool}}
+        {{/each}}
+</template>
+
+
+
+<template name="dragTool">
+    <div id="{{id}}" class="dragTag draggable">
+    {{tag}}
+        <div class="clone">
+            <{{tag}} class="canverse-kit_add editTarget"></{{tag}}>
+        </div>
+    </div>
+</template>

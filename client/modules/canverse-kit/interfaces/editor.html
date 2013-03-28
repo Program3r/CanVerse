@@ -1,0 +1,45 @@
+<template name="editor">
+  <div class="modal editor" id="editor_{{id}}">
+      <div class="modal-header draggable">
+        <h3>Editor</h3>
+      </div>
+      <div class="modal-body">
+        {{>editorTabsContainer}}
+      </div>
+      <div class="modal-footer">
+      </div>
+  </div>
+</template>
+
+<template name="editorTabs">
+  <li data-toggle="tab">
+    <a href="#{{id}}" data-toggle="tab">{{tabName}}</a>
+  </li>
+</template>
+
+<template name="editorTabsContainer">
+    <div>
+        <ul class="nav nav-tabs">
+                {{#if hasTpl "htmlEdit"}}
+                    {{>htmlEditTab}}
+                {{/if}}
+                {{#if hasTpl "cssEdit"}}
+                    {{>cssEditTab}}
+                {{/if}}
+                {{#if hasTpl "javascriptEdit"}}
+                    {{>javascriptEditTab}}
+                {{/if}}
+        </ul>
+        <div class="tab-content" id="tabs_{{id}}">
+                {{#if hasTpl "htmlEdit"}}
+                    {{>htmlEdit}}
+                {{/if}}
+                {{#if hasTpl "cssEdit"}}
+                    {{>cssEdit}}
+                {{/if}}
+                {{#if hasTpl "javascriptEdit"}}
+                    {{>javascriptEdit}}
+                {{/if}}
+         </div>
+    </div>
+</template>
