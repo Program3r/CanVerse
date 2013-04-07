@@ -1,32 +1,20 @@
 <head>
-  <title></title>
+  <title>CanVerse Editor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div id="canverse">
     </div>
+
 </body>
-   
 
-
-
-<template name="buttonDropdown">
-<div class="btn-group">
-                <button class="btn">{{name}}</button>
-                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  
-                  {{#each values}}
-                        <li><a href="#" data-action-value="{{value}}">{{actionname}}</a></li>
-                  {{/each}}
-                </ul>
-              </div>
-              <a href="#" id="username" data-type="text" data-pk="1" data-url="/post" data-original-title="Enter username">superuser</a>
+<template name="slideshow">
+    <div id="slideshow">
+        {{#each slide}}
+            <div class="dragTag">
+            {{title}}
+            </div>
+        {{/each}}
+    </div>
 </template>
-
-<template name="skeletonControls">
-        <button id="{{id}}" class="btn tool-add"><i class="icon-plus"></i></button>+
-</template>
-
-

@@ -1,3 +1,36 @@
 #htmldrag{
     min-height:300px;
 }
+.dragTag{
+    width:50px;
+    height:50px;
+    border:1px dashed black;
+}
+.ui-draggable{
+    cursor:move;
+}
+.dropTag{
+    border:1px dashed black;
+    min-height:50px !important;
+    -webkit-transition: All 1s;
+    min-width:50px;
+    overflow:auto;
+    width:auto;
+    height:auto;
+}
+.dropTag.ui-state-hover{
+    border:1px dotted black;
+    -moz-box-shadow: inset 0 0 5px #888;
+    -webkit-box-shadow: inset 0 0 5px#888;
+    box-shadow: inner 0 0 5px #888;
+    min-height:200px;
+    min-width:200px;
+}
+.dropTag.ck-active{
+    border:1px dotted red;
+}
+.dropTag.ui-state-active{
+    border:1px solid green;
+    min-height:200px;
+    min-width:200px;
+}

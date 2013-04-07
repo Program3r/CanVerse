@@ -3,3 +3,4 @@
 {"ts":1364621156552,"patch":[[{"diffs":[[0,"3>Editor"],[-1,"r"],[0,"</h3>\n  "]],"start1":126,"start2":126,"length1":17,"length2":16}]],"length":1243,"saved":false}
 {"ts":1364622156997,"patch":[[{"diffs":[[0,"\">{{"],[-1,"tabN"],[1,"n"],[0,"ame}"]],"start1":390,"start2":390,"length1":12,"length2":9}]],"length":1240,"saved":false}
 {"ts":1364622180155,"patch":[[{"diffs":[[0,"<h3>"],[-1,"Editor"],[1,"{{title}}"],[0,"</h3"]],"start1":124,"start2":124,"length1":14,"length2":17}]],"length":1243,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1364639744760,"patch":[[{"diffs":[[0,"ader"],[-1," draggable"],[0,"\">\n "]],"start1":99,"start2":99,"length1":18,"length2":8}]],"length":1233,"saved":false}

@@ -1,7 +1,7 @@
 <template name="editor">
   <div class="modal editor" id="editor_{{id}}">
-      <div class="modal-header draggable">
-        <h3>Editor</h3>
+      <div class="modal-header">
+        <h3>{{title}}</h3>
       </div>
       <div class="modal-body">
         {{>editorTabsContainer}}
@@ -13,7 +13,7 @@
 
 <template name="editorTabs">
   <li data-toggle="tab">
-    <a href="#{{id}}" data-toggle="tab">{{tabName}}</a>
+    <a href="#{{id}}" data-toggle="tab">{{name}}</a>
   </li>
 </template>
 

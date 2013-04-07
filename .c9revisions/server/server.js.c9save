@@ -1,0 +1,1 @@
+{"ts":1365359852070,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"if (Meteor.isServer) {\n  Meteor.startup(function () {\n    // code to run on server at startup\n  });\n}\n\nMeteor.publish(\"slides\", function () {\n  //return Parties.find({owner: this.userId});\n});\n"]],"start1":0,"start2":0,"length1":0,"length2":193}]],"length":193}
