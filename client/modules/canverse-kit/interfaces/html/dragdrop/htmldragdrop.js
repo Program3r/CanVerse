@@ -31,6 +31,7 @@ if (Meteor.isClient) {
         $("body").delegate(".dropTag", "click", function(event){
             $(".ck-active").removeClass("ck-active");
             $(this).addClass("ck-active");
+            $(this).zoomTo({targetsize:1, duration:600});
             return false;
         });
         
@@ -41,16 +42,14 @@ if (Meteor.isClient) {
             var dragclone = $(ui.draggable).clone();
             dragclone.attr("style", "");
             dragclone.removeClass("dragTag");
-            dragclone.attr("id", "");
+            dragclone.attr("id", "11");
             dragclone.addClass("dropTag");
-            $("body").find(".ck-active").append(dragclone.html(""));
+            //$("body").find(".ck-active").append(dragclone.html(""));
+            if($(this).hasClass("ck-active")){
+                Meteor.call("createSlide", {html:htmlEncode(dragclone.find(".clone").html())});
+            }
             //dropzone.removeClass("span"+(dragscount-1))
-            dragclone.droppable({
-                  activeClass: "ui-state-hover",
-                  hoverClass: "ui-state-active",
-                  greedy:true,
-                  accept:"dropTag"
-            });
+            
           }
         });
     });

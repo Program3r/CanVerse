@@ -18,6 +18,19 @@
     width:auto;
     height:auto;
 }
+.clone{
+    display:none;
+}
+.dropTag{
+    margin:10px;
+    -webkit-transition: All 1s;
+}
+.dropTag.ck-active{
+    -moz-box-shadow: inset 0 0 5px 5px #888;
+-webkit-box-shadow: inset 0 0 5px 5px#888;
+box-shadow: inset 0 0 5px 5px #888;
+background-color:#d6d6d6;
+}
 .dropTag.ui-state-hover{
     border:1px dotted black;
     -moz-box-shadow: inset 0 0 5px #888;
@@ -29,7 +42,7 @@
 .dropTag.ck-active{
     border:1px dotted red;
 }
-.dropTag.ui-state-active{
+.dropTag.ui-state-active.ck-active{
     border:1px solid green;
     min-height:200px;
     min-width:200px;
