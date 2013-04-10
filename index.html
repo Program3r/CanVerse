@@ -12,8 +12,8 @@
 <template name="slideshow">
     <div id="slideshow">
         {{#each slide}}
-            <div class="dataTag">
-            {{html}}
+            <div class="dataTag" id="{{_id}}">
+                {{html}}
             </div>
         {{/each}}
     </div>

@@ -6,6 +6,11 @@ Slides = new Meteor.Collection("slides");
         return Slides.insert({
           html: options.html
         });
+      },
+      updateHtml: function(options){
+        Slides.update(
+          {_id: options.id},
+          {$set: {html: options.html}});
       }
     });
 }

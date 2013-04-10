@@ -14,6 +14,10 @@ Template.htmlDragDrop.tags = [
     {
         tag:"SECTION",
         id:"dragSection"
+    },
+    {
+        tag:"IMG",
+        id:"dragImg"
     }
 ];
 
@@ -31,10 +35,14 @@ if (Meteor.isClient) {
         $("body").delegate(".dropTag", "click", function(event){
             $(".ck-active").removeClass("ck-active");
             $(this).addClass("ck-active");
+            //$(this).resizable();
+            
+            return false;
+        });
+        $("body").delegate(".dropTag", "dblclick", function(event){
             $(this).zoomTo({targetsize:1, duration:600});
             return false;
         });
-        
         $("#canverse").addClass("dropTag");
         
         $("#canverse").droppable({
@@ -52,5 +60,6 @@ if (Meteor.isClient) {
             
           }
         });
+        
     });
 }

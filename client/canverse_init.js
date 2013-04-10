@@ -21,8 +21,11 @@ function updateSlides(){
                         dragclone.attr("style", "");
                         dragclone.removeClass("dragTag");
                         dragclone.addClass("dropTag");
-                        console.log("dropped");
+                        var id = $("#canverse .ck-active").parents(".dataTag").attr("id");
                         $("body").find(".ck-active").append(dragclone.html());
+                        Meteor.call("updateHtml", {id:id, html:htmlEncode($("#"+id).html())});
+                        //$("#"+id).removeClass("parsed");
+                        
                         //dropzone.removeClass("span"+(dragscount-1))
               }
             });
